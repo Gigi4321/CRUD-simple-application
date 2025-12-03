@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.main.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- !start of card of inputs -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-sm-11 col-md-10 col-lg-7 mx-auto">
+                <div class="card p-4 rounded-4 mx-auto shadow-sm">
+                    <div class="container  top p-0">
+                        <div class="row g-3 p-0">
+                            <!--? start of upload image-->
+                            <div class="mb-3 ">
+                                <label for="formFile" class="form-label p-3 w-100 image">
+                                    <p><i class="fa-regular fa-image"></i> Product Image</p>
+                                    <div class=" d-flex flex-column align-items-center justify-content-center gap-2">
+                                        <span class="icon-holder d-flex align-items-center justify-content-center"><i
+                                                class="fa-solid fa-upload fa-xl"></i></span>
+                                        <span>Click to upload image</span>
+                                    </div>
+                                    <input class="form-control d-none" type="file" id="formFile">
+                                </label>
+                            </div>
+                            <!--? start of product name field-->
+                            <div class="mb-3">
+                                <label for="productName" class="form-label"><i
+                                        class="fa-solid fa-pen fa-rotate-270"></i> Product
+                                    Name
+                                    *</label>
+                                <input type="text" class="form-control" id="productName"
+                                    placeholder="Enter your product title">
+                            </div>
+                            <!-- ? start of description textarea  -->
+                            <div class="mb-3">
+                                <label for="productDesc" class="form-label"><i class="fa-solid fa-file-lines"></i>
+                                    description
+                                    *</label>
+                                <textarea class="form-control" id="productDesc" style="height: 100px"
+                                    placeholder="Enter the description of your product"></textarea>
+                            </div>
+
+                            <!-- ? strart of bottom section of input (price ,stock,category) -->
+                            <!-- todo: price -->
+                            <div class=" col-sm-6 col-md-4">
+                                <div class="  border rounded-3 p-3 one">
+
+                                    <label for="productPrice" class="form-label"><i class="fa-solid fa-dollar-sign"></i>
+                                        Price
+                                        *</label>
+                                    <input type="number" class="form-control" id="productPrice" placeholder="0.0">
+                                </div>
+                            </div>
+                            <!-- todo: category -->
+                            <div class=" col-sm-6 col-md-4">
+                                <div class="border rounded-3 p-3 two">
+                                    <label for="productCategorys" class="form-label">
+                                        <i class="fa-solid fa-table-cells-large"></i> Category *
+                                    </label>
+                                    <input type="text" list="productCategory" class="form-control" id="productCategorys"
+                                        placeholder="ex:Labtop">
+                                    <datalist id="productCategory">
+                                        <option value="Mobile">Mobile</option>
+                                        <option value="Labtop">Labtop</option>
+                                        <option value="TV">TV</option>
+                                        <option value="Watches">Watches</option>
+                                        <option value="Electronics">Electronics</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <!-- todo: stock quntaties -->
+                            <div class=" col-sm-6 col-md-4">
+                                <div class=" border three rounded-3 p-3">
+                                    <label for="productStock" class="form-label"><i
+                                            class="fa-brands fa-stack-overflow"></i> Stock
+                                        *</label>
+                                    <input type="number" class="form-control" id="productStock" placeholder="ex:1">
+                                </div>
+                            </div>
+                            <!-- ? this is the CTA card -->
+                            <div class="buttons mt-5">
+                                <div class="row g-2">
+                                    <div class="col-12 col-md-9">
+                                        <button type="submit" class="btn w-100 main-btn  m-auto fw-bold flex-grow-1"
+                                            onclick="addProduct()">Add This Product</button>
+                                    </div>
+                                    <div class="col-12 col-md-3">
+                                        <button type="reset" class="btn w-100 sec-btn m-auto fw-bold flex-grow-1"
+                                            onclick="deleteProduct()">clear</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !end of cards for inputs -->
+
+    <!-- ? start of cards for products -->
+    <div class="container products my-5">
+        <div class="row g-3" id="my-products">
+           
+   
+        </div>
+    </div>
+    <script src="js/js.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
