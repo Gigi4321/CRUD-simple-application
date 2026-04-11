@@ -12,6 +12,9 @@ var products = [];
 
 if(localStorage.getItem('products')){
   products=JSON.parse(localStorage.getItem('products'))
+  console.log("hello")
+  display()
+  console.log('done')
 }
 
 
