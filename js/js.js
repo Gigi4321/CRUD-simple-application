@@ -10,20 +10,11 @@ var productStock = document.getElementById("productStock");
 //! producta array that i will put object (any product) on it
 var products = [];
 
-//!add product function
-function addProduct() {
-  var product = {
-    Name: productName.value,
-    Description: productDesc.value,
-    Price: productPrice.value,
-    Category: productCategory.value,
-    Stock: productStock.value,
-  };
-
-  products.push(product);
-  display();
-  deleteProduct();
+if(localStorage.getItem('products')){
+  products=JSON.parse(localStorage.getItem('products'))
 }
+
+
 //!make inputs clear after add products
 function deleteProduct() {
   productName.value = null;
@@ -84,6 +75,7 @@ function display() {
 
 function RemoveProduct(i) {
   products.splice(i, 1);
+  localStorage.setItem('products',JSON.stringify(products))
   display();
 }
 
@@ -116,7 +108,7 @@ function addProduct() {
    
     products.push(product);
   }
-
+  localStorage.setItem('products',JSON.stringify(products))
   display();
   clearInputs();
 }
