@@ -206,8 +206,3 @@ function clearInputs() {
   productStock.value = "";
 }
 
-
-
-
-
-let x=//
