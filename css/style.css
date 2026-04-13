@@ -6,6 +6,9 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #26252c !important;
   transition: background-color 9999s ease-out 0s;
 }
+#search{
+  outline: none!important;
+}
 
 body{
   background-color: #eee;
